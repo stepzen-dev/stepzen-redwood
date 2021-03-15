@@ -1,11 +1,6 @@
 schema
   @sdl(
-    files: [
-      "shopify/customers.graphql"
-      "shopify/extend.graphql"
-      "shopify/orders.graphql"
-      "shopify/products.graphql"
-    ]
+    files: [ "shopify/products.graphql" ]
   ) {
   query: Query
 }
