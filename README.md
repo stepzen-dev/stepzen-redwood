@@ -120,6 +120,8 @@ export const request = async (query = {}) => {
 ```
 
 ```javascript
+// api/src/services/product.js
+
 import { request } from 'src/lib/db'
 import { gql } from 'graphql-request'
 
