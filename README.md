@@ -74,7 +74,7 @@ configurationset:
 ### Deploy endpoint
 
 ```bash
-cd api/stepzen && stepzen start redwood-shopify/shopify
+cd api/stepzen && stepzen start stepzen-redwood/shopify
 ```
 
 ### Query
@@ -89,7 +89,7 @@ query ProductsQuery {
 }
 ```
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nq9dzwemb71d52g54k02.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2st9xj5kl640xdaritns.png)
 
 ## Redwood API Side
 
