@@ -1,4 +1,4 @@
-# Redwood+StepZen
+# Redwood+StepZen and Shopify
 
 ### Setup
 
