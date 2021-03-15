@@ -215,7 +215,7 @@ const HomePage = () => {
 export default HomePage
 ```
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/km0sptt2ikudsd7q99z8.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gj4pvqmrlil8wwsewlqr.png)
 
 ## Deploy to Netlify
 
