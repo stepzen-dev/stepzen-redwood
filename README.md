@@ -240,4 +240,6 @@ functions = "api/dist/functions"
   status = 200
 ```
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r5d5w2z27imslznuimab.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/054g4nmv18e9vbqte86a.png)
+
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kkobxqb731w0j7k3nw01.png)
