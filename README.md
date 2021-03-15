@@ -103,7 +103,7 @@ export const schema = gql`
 import { GraphQLClient } from 'graphql-request'
 
 export const request = async (query = {}) => {
-  const endpoint = 'https://pleasanton.stepzen.net/redwood-shopify/shopify/__graphql'
+  const endpoint = process.env.API_ENDPOINT
 
   const graphQLClient = new GraphQLClient(endpoint, {
     headers: {
@@ -112,15 +112,15 @@ export const request = async (query = {}) => {
   })
   try {
     return await graphQLClient.request(query)
-  } catch (error) {
-    console.log(error)
-    return error
+  } catch (err) {
+    console.log(err)
+    return err
   }
 }
 ```
 
 ```javascript
-// api/src/services/product.js
+// api/src/services/products.js
 
 import { request } from 'src/lib/db'
 import { gql } from 'graphql-request'
@@ -145,6 +145,12 @@ export const products = async () => {
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nw0tmstq7r5wl4xx41dy.png)
 
 ## Redwood Web Side
+
+The `web` side contains our `ProductsCell` for fetching `products` and a `HomePage` for rendering the cell.
+
+### `ProductsCell`
+
+`ProductsQuery` and returns the `id`, `title`, and `handle` of each `Product`.
 
 ```javascript
 // web/src/components/ProductsCell/ProductsCell.js
@@ -200,6 +206,8 @@ export default HomePage
 ```bash
 yarn rw setup deploy netlify
 ```
+
+This generates the following `netlify.toml` file:
 
 ```toml
 [build]
