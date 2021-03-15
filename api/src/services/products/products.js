@@ -1,4 +1,4 @@
-import { request } from 'src/lib/db'
+import { request } from 'src/lib/client'
 import { gql } from 'graphql-request'
 
 export const products = async () => {

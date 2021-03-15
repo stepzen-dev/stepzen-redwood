@@ -6,7 +6,6 @@ export const schema = gql`
   }
 
   type Query {
-    product(id: ID): Product
     products: [Product]
   }
 `

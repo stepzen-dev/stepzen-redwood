@@ -18,7 +18,11 @@ Your browser should open automatically to `http://localhost:8910` to see the web
 
 ## StepZen Side
 
+`products.graphql` has a `Product` interface and a `products` query that returns an array of `Product` objects.
+
 ```graphql
+# api/stepzen/shopify/products.graphql
+
 interface Product {
   id: ID!
   handle: String
@@ -28,15 +32,7 @@ interface Product {
 type ShopifyProduct implements Product {}
 
 type Query {
-  product(id: ID!): Product
   products: [Product]
-  shopifyProduct(id: ID!): ShopifyProduct
-    @supplies(query: "product")
-    @rest(
-      resultroot: "product"
-      endpoint: "https://$api_key:$api_password@$store_name.myshopify.com/admin/api/2020-01/products/$id.json"
-      configuration: "shopify_config"
-    )
   shopifyProductList: [ShopifyProduct]
     @supplies(query: "products")
     @rest(
@@ -47,7 +43,24 @@ type Query {
 }
 ```
 
+### index.graphql
+
+```graphql
+# api/stepzen/index.graphql
+
+schema
+  @sdl(
+    files: [ "shopify/products.graphql" ]
+  ) {
+  query: Query
+}
+```
+
 ### config.yaml
+
+```bash
+touch api/stepzen/config.yaml
+```
 
 ```yaml
 configurationset:
@@ -61,7 +74,7 @@ configurationset:
 ### Deploy endpoint
 
 ```bash
-stepzen start redwood-shopify/shopify
+cd api/stepzen && stepzen start redwood-shopify/shopify
 ```
 
 ### Query
@@ -91,14 +104,13 @@ export const schema = gql`
   }
 
   type Query {
-    product(id: ID): Product
     products: [Product]
   }
 `
 ```
 
 ```javascript
-// api/src/lib/db.js
+// api/src/lib/client.js
 
 import { GraphQLClient } from 'graphql-request'
 
@@ -119,10 +131,14 @@ export const request = async (query = {}) => {
 }
 ```
 
-```javascript
-// api/src/services/products.js
+### `products` service
 
-import { request } from 'src/lib/db'
+The `products` service sends a `query` with the `GraphQLClient` imported from `src/lib/client`.
+
+```javascript
+// api/src/services/products/products.js
+
+import { request } from 'src/lib/client'
 import { gql } from 'graphql-request'
 
 export const products = async () => {
