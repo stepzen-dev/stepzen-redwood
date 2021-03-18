@@ -18,7 +18,7 @@ Create and deploy a GraphQL API for a Shopify backend connected to a React front
 * [Redwood API Side](https://github.com/stepzen-samples/stepzen-redwood#redwood-api-side)
   * [`products.sdl.js`](https://github.com/stepzen-samples/stepzen-redwood#productssdljs)
   * [`client.js`](https://github.com/stepzen-samples/stepzen-redwood#clientjs)
-  * [`products.js`](https://github.com/stepzen-samples/stepzen-redwood#products-service)
+  * [`products.js`](https://github.com/stepzen-samples/stepzen-redwood#productsjs)
 * [Redwood Web Side](https://github.com/stepzen-samples/stepzen-redwood#redwood-web-side)
   * [`ProductsCell`](https://github.com/stepzen-samples/stepzen-redwood#productscell)
   * [`HomePage`](https://github.com/stepzen-samples/stepzen-redwood#homepage)
