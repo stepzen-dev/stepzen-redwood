@@ -144,7 +144,7 @@ Our `schema` in `index.graphql` ties together all of our other schemas. For this
 
 schema
   @sdl(
-    files: [ "shopify/products.graphql" ]
+    files: [ "products.graphql" ]
   ) {
   query: Query
 }
@@ -502,7 +502,6 @@ Open your browser's developer tools and look at the console.
 
 ![07-console-log-response-data](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kkobxqb731w0j7k3nw01.png)
 
-
 # Cheat Sheet
 
 ## Setup
@@ -563,7 +562,7 @@ type Query {
 
 schema
   @sdl(
-    files: [ "shopify/products.graphql" ]
+    files: [ "products.graphql" ]
   ) {
   query: Query
 }
