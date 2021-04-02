@@ -106,18 +106,12 @@ interface Product {
 }
 
 type ShopifyProduct implements Product {}
-
-type Query { ... }
 ```
 
 The `@rest` directive accepts the `endpoint` from Shopify and the `@supplies` directive provides the query.
 
 ```graphql
 # api/stepzen/shopify/products.graphql
-
-interface Product { ... }
-
-type ShopifyProduct implements Product {}
 
 type Query {
   products: [Product]
