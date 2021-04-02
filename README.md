@@ -4,28 +4,6 @@
 
 Create and deploy a GraphQL API for a Shopify backend connected to a React frontend and deployed on a static hosting provider. Redwood's `api` side is auto-configured with a GraphQL handler that can be deployed with a serverless function, enabling [secure API routes](https://stepzen.com/blog/how-to-secure-api-routes-for-jamstack-sites).
 
-## Outline
-
-* [Setup](https://github.com/stepzen-samples/stepzen-redwood#setup)
-  * [Fire it up](https://github.com/stepzen-samples/stepzen-redwood#fire-it-up)
-* [Project Structure](https://github.com/stepzen-samples/stepzen-redwood#project-structure)
-* [StepZen Side](https://github.com/stepzen-samples/stepzen-redwood#stepzen-side)
-  * [`products.graphql`](https://github.com/stepzen-samples/stepzen-redwood#productsgraphql)
-  * [`index.graphql`](https://github.com/stepzen-samples/stepzen-redwood#indexgraphql)
-  * [`config.yaml`](https://github.com/stepzen-samples/stepzen-redwood#configyaml)
-  * [Deploy endpoint](https://github.com/stepzen-samples/stepzen-redwood#deploy-endpoint)
-  * [Query endpoint](https://github.com/stepzen-samples/stepzen-redwood#query-endpoint)
-* [Redwood API Side](https://github.com/stepzen-samples/stepzen-redwood#redwood-api-side)
-  * [`products.sdl.js`](https://github.com/stepzen-samples/stepzen-redwood#productssdljs)
-  * [`client.js`](https://github.com/stepzen-samples/stepzen-redwood#clientjs)
-  * [`products.js`](https://github.com/stepzen-samples/stepzen-redwood#productsjs)
-* [Redwood Web Side](https://github.com/stepzen-samples/stepzen-redwood#redwood-web-side)
-  * [`ProductsCell`](https://github.com/stepzen-samples/stepzen-redwood#productscell)
-  * [`HomePage`](https://github.com/stepzen-samples/stepzen-redwood#homepage)
-* [Finished Project Structure](https://github.com/stepzen-samples/stepzen-redwood#finished-project-structure)
-* [Deploy to Netlify](https://github.com/stepzen-samples/stepzen-redwood#deploy-to-netlify)
-  * [Setup command](https://github.com/stepzen-samples/stepzen-redwood#setup-command)
-
 ## Setup
 
 Create a Redwood application.
