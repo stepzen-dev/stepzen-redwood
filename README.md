@@ -379,6 +379,7 @@ const HomePage = () => {
   return (
     <>
       <h1>HomePage</h1>
+      <h2>Products</h2>
       <ProductsCell />
     </>
   )
@@ -744,6 +745,7 @@ const HomePage = () => {
   return (
     <>
       <h1>HomePage</h1>
+      <h2>Products</h2>
       <ProductsCell />
     </>
   )
