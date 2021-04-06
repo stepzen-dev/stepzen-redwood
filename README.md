@@ -163,7 +163,7 @@ configurationset:
 ### Deploy endpoint
 
 ```bash
-cd api/stepzen && stepzen start stepzen-redwood/shopify
+cd api/stepzen && stepzen start
 ```
 
 This will open a GraphQL explorer on `localhost:5000`.
