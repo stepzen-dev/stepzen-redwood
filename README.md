@@ -1,6 +1,6 @@
 # Redwood+StepZen and Shopify
 
-![stepzen-redwood-cover](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rm3wlutvpe0hnytr1al0.png)
+![stepzen-redwood-cover](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4gmoeed12g8imj1oz4dd.png)
 
 Create and deploy a GraphQL API for a Shopify backend connected to a React frontend and deployed on a static hosting provider. Redwood's `api` side is auto-configured with a GraphQL handler that can be deployed with a serverless function, enabling [secure API routes](https://stepzen.com/blog/how-to-secure-api-routes-for-jamstack-sites).
 
