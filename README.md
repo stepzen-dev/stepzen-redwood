@@ -272,22 +272,20 @@ import { request } from 'src/lib/client'
 import { gql } from 'graphql-request'
 
 export const products = async () => {
-  const GET_PRODUCTS_QUERY = gql`
-    query getProducts {
-      products {
-        title
-        id
-        handle
-      }
+  const query = gql`{
+    products {
+      title
+      id
+      handle
     }
-  `
+  }`
 
-  const data = await request(GET_PRODUCTS_QUERY)
+  const data = await request(query)
   return data['products']
 }
 ```
 
-`GET_PRODUCTS_QUERY` is sent with the `GraphQLClient` imported from `src/lib/client`. The query is asking for the list of `products` and their `title`, `id`, and `handle`.
+The query is asking for the list of `products` and their `title`, `id`, and `handle`. The `GraphQLClient` is imported from `src/lib/client`.
 
 ## Redwood Web Side
 
