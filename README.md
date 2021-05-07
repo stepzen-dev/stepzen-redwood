@@ -346,7 +346,7 @@ const HomePage = () => {
     <>
       <h1>StepZen+Redwood and Shopify</h1>
       <h2>Products</h2>
-      
+
       <ProductsCell />
     </>
   )

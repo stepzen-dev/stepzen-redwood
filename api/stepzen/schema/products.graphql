@@ -1,15 +1,11 @@
-interface Product {
+type Product {
   id: ID!
   handle: String
   title: String
 }
 
-type ShopifyProduct implements Product {}
-
 type Query {
   products: [Product]
-  shopifyProductList: [ShopifyProduct]
-    @supplies(query: "products")
     @rest(
       resultroot: "products[]"
       endpoint: "https://$api_key:$api_password@$store_name.myshopify.com/admin/api/2020-01/products.json"
