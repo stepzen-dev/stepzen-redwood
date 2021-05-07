@@ -59,6 +59,8 @@ git clone https://github.com/stepzen-samples/stepzen-redwood.git
 cd stepzen-redwood
 ```
 
+### Install dependencies
+
 We'll use [yarn](https://classic.yarnpkg.com/en/docs/install) (which is a requirement) to install our dependencies.
 
 ```bash
