@@ -52,6 +52,13 @@ This example project creates a GraphQL API for a Shopify backend connected to a 
 
 ## Setup
 
+### Clone repo
+
+```bash
+git clone https://github.com/stepzen-samples/stepzen-redwood.git
+cd stepzen-redwood
+```
+
 We'll use [yarn](https://classic.yarnpkg.com/en/docs/install) (which is a requirement) to install our dependencies.
 
 ```bash
