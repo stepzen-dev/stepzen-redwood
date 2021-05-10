@@ -100,19 +100,18 @@ configurationset:
 
 ### Deploy endpoint
 
-`cd` into the `stepzen` directory and deploy your endpoint with `stepzen start`.
+Deploy your endpoint with `stepzen start`.
 
 ```bash
-cd api/stepzen
 stepzen start
 ```
 
 ### Query endpoint
 
-`ProductsQuery` returns an array of `Product` objects with the `title`, `id`, and `handle` for each. Open the GraphQL explorer and enter the following query.
+`getProducts` returns an array of `Product` objects with the `title`, `id`, and `handle` for each. Open the GraphQL explorer and enter the following query.
 
 ```graphql
-query ProductsQuery {
+query getProducts {
   products {
     title
     id
@@ -133,7 +132,7 @@ touch .env
 
 The server does not detect this change and will result in an error message if you do not restart it after creating the `.env` file.
 
-```
+```bash
 API_ENDPOINT=<YOUR_API_ENDPOINT>
 API_KEY=<YOUR_API_KEY>
 ```
@@ -281,15 +280,18 @@ import { request } from 'src/lib/client'
 import { gql } from 'graphql-request'
 
 export const products = async () => {
-  const query = gql`{
-    products {
-      title
-      id
-      handle
+  const GET_PRODUCTS_QUERY = gql`
+    query getProducts {
+      products {
+        title
+        id
+        handle
+      }
     }
-  }`
+  `
 
-  const data = await request(query)
+  const data = await request(GET_PRODUCTS_QUERY)
+
   return data['products']
 }
 ```
@@ -302,13 +304,13 @@ The `web` side contains our `ProductsCell` for fetching `products` and a `HomePa
 
 ### ProductsCell
 
-`ProductsQuery` returns the `id`, `title`, and `handle` of each `Product`. This will send the query to our `api` side, which in turn sends a query to our StepZen API.
+`getProducts` returns the `id`, `title`, and `handle` of each `Product`. This will send the query to our `api` side, which in turn sends a query to our StepZen API.
 
 ```jsx
 // web/src/components/ProductsCell/ProductsCell.js
 
 export const QUERY = gql`
-  query ProductsQuery {
+  query getProducts {
     products {
       id
       title
