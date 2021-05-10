@@ -106,6 +106,24 @@ Deploy your endpoint with `stepzen start`.
 stepzen start
 ```
 
+In addition to deploying your endpoint, it will also be running on `localhost:5000`.
+
+```bash
+Watching ~/stepzen-redwood/api/stepzen for GraphQL changes
+
+http://localhost:5000/stepzen-redwood/products
+```
+
+The terminal will output the link to a deployed endpoint you can query. Your own account name will replace `biggs`.
+
+```bash
+Deploying to StepZen...... done
+
+Successfully deployed stepzen-redwood/products at 2:33:27 PM
+
+Your endpoint is available at https://biggs.stepzen.net/stepzen-redwood/products/__graphql
+```
+
 ### Query endpoint
 
 `getProducts` returns an array of `Product` objects with the `title`, `id`, and `handle` for each. Open the GraphQL explorer and enter the following query.
